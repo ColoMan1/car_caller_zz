@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>内部人员车辆出入系统</title>
+		<link rel="stylesheet" type="text/css" href="../css/index.css" />
+		<link rel="stylesheet" type="text/css" href="../font/iconfont.css" />
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<link rel="stylesheet" href="../css/LCalendar.css">
+	</head>
+
+	<body>
+		<img src="../images/bg.png" style="position: absolute;top: 0;z-index: -1;height: 100%;width: 100%;"/>
+		<div class="permit_bigbox">
+			<p class="record_p">
+				<a href="#">
+					<i class="iconfont one">&#xe601;</i>
+				</a>
+				<span>内部人员车辆出入系统</span>
+				<a href="#">
+					<i class="iconfont two">&#xe61d;</i>
+				</a>
+			</p>
+			<div class="record_top">
+				<p>外出申请信息</p>
+			</div>
+			<div class="caller_details_content">
+				<table>
+					<tr>
+						<td><span>姓名：</span><input type="text" name="" id="" value="" /></td>
+					</tr>
+					<tr>
+						<td><span>手机：</span><input type="text" name="" id="" value="" /></td>
+					</tr>
+					<tr>
+						<td><span>日期：</span><input id="demo1" type="text" readonly="" name="input_date" data-lcalendar="2000-01-01,2018-01-29" /></td>
+					</tr>
+					<tr>
+						<td><span>车牌：</span><input type="text" name="" id="" value="" /></td>
+					</tr>
+					<tr>
+						<td><span>事由: </span><input type="text" name="" id="" value=""/></td>
+					</tr>
+				</table>
+			</div>
+			<button class="caller_details_btn" style="position: fixed;bottom: 3rem;">申请访问</button>
+			<div class="bottom_box" style="position: fixed;bottom: 0;width: 100%;">
+				<div class="register_buttom">
+					<a href="#"><img src="../images/浙江汉脑.png" /></a>
+					<span></span>
+					<a href="#"><img src="../images/鉴真宝.png" /></a>
+				</div>
+			</div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/demo.js"></script>
+		<script src="../js/jquery-3.2.0.slim.min.js"></script>
+		<script src="../js/index.js"></script>
+		<script src="../js/LCalendar.js"></script>
+		<script>
+		var now = new Date();
+		demo1.value=new Date().getFullYear() + '-' + (new Date().getMonth() + 1) + '-' + new Date().getDate();
+		
+			var calendar = new LCalendar();
+			calendar.init({
+				'trigger': '#demo1', //标签id
+				'type': 'date', //date 调出日期选择 datetime 调出日期时间选择 time 调出时间选择 ym 调出年月选择,
+				'minDate': new Date().getFullYear() + '-' + (new Date().getMonth() + 1) + '-' + new Date().getDate(), //最小日期
+				'maxDate': new Date().getFullYear() + '-' + (new Date().getMonth() + 3) + '-' + new Date().getDate()//最大日期
+			});
+			
+		</script>
+	</body>
+
+</html>
